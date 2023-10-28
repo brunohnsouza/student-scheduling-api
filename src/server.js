@@ -9,4 +9,10 @@ server.use(express.json());
 server.use(router);
 server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-server.listen(3000, () => console.log("Server listening on port 3000"));
+server.listen(process.env.PORT ? Number(process.env.PORT) : 3333, () =>
+  console.log(
+    `Server listening on port ${
+      process.env.PORT ? Number(process.env.PORT) : 3333
+    }`
+  )
+);
