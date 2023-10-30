@@ -1,5 +1,5 @@
 import { Router } from "express";
-import StudentController from "./controllers/StudentController";
+import StudentController from "./controllers/StudentController.js";
 
 const router = Router();
 
@@ -9,4 +9,4 @@ router.get("/student/:id", StudentController.findStudentById);
 router.put("/student/:id", StudentController.updateStudent);
 router.delete("/student/:id", StudentController.deleteStudent);
 
-exports.router = router;
+export { router };
