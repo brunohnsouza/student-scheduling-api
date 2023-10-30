@@ -1,9 +1,9 @@
-const swaggerUi = require("swagger-ui-express");
+import swaggerUi from "swagger-ui-express";
 import * as swaggerDocs from "./swagger.json" assert { type: "json" };
 
+import express from "express";
 import { router } from "./routes.js";
 
-const express = require("express");
 const server = express();
 
 server.use(express.json());
