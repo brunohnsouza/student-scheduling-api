@@ -3,7 +3,7 @@ const swaggerUi = require("swagger-ui-express");
 
 const swaggerDocs = require("./swagger.json");
 
-import { router } from "./routes";
+const { router } = require("./routes");
 
 const server = express();
 
