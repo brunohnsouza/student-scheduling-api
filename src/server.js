@@ -1,9 +1,7 @@
-const express = require("express");
-const swaggerUi = require("swagger-ui-express");
-
-const swaggerDocs = require("./swagger.json");
-
-const { router } = require("./routes");
+import express from "express";
+import swaggerUi from "swagger-ui-express";
+import swaggerDocs from "./swagger.json";
+import { router } from "./routes";
 
 const server = express();
 
