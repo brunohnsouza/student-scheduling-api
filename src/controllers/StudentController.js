@@ -49,7 +49,7 @@ export default {
       });
 
       if (!student)
-        return res.status(204).json({ message: "Aluno não encontrado" });
+        return res.status(404).json({ message: "Aluno não encontrado" });
 
       return res.status(200).json(student);
     } catch (error) {
@@ -73,7 +73,7 @@ export default {
       });
 
       if (!student)
-        return res.status(204).json({ message: "Aluno não encontrado" });
+        return res.status(404).json({ message: "Aluno não encontrado" });
 
       student = await prisma.student.update({
         where: { id: Number(id) },
@@ -101,7 +101,7 @@ export default {
       });
 
       if (!student)
-        return res.status(204).json({ message: "Aluno não encontrado" });
+        return res.status(404).json({ message: "Aluno não encontrado" });
 
       await prisma.student.delete({ where: { id: Number(id) } });
 
