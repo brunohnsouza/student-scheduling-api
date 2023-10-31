@@ -1,10 +1,12 @@
 import express from "express";
+import cors from "cors";
 import swaggerUi from "swagger-ui-express";
 import swaggerDocs from "./swagger.json" assert { type: "json" };
 import { router } from "./routes.js";
 
 const server = express();
 
+server.use(cors());
 server.use(express.json());
 server.use(router);
 server.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
