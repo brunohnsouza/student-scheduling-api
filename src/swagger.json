@@ -3,23 +3,23 @@
   "info": {
     "title": "Gerenciamento de Alunos: Documentação da API",
     "description": "Essa API fornece acesso a recursos para armazenar, recuperar, atualizar e excluir informações sobre alunos em uma instituição educacional. Com ela você conseguirá interagir com dados detalhados de alunos, incluindo nome, idade, notas de semestres, nome do professor e número da sala.",
-    "contact": {
-      "email": "brunohnsouzacontato@gmail.com"
-    },
     "version": "1.0.0"
   },
+  "basePath": "/",
   "servers": [
     {
-      "url": "http://localhost:3000",
+      "url": "https://school-api-rbyx.onrender.com",
+      "description": "API em produção"
+    },
+    {
+      "url": "http://localhost:3333",
       "description": "API de test"
     }
   ],
   "paths": {
     "/student": {
       "post": {
-        "sumary": "Criar aluno",
         "description": "Essa rota será responsável por criar um novo aluno.",
-        "tags": ["Student"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -58,9 +58,7 @@
     },
     "/students": {
       "get": {
-        "sumary": "Listar todos os alunos",
         "description": "Essa rota será responsável por listar todos os alunos já cadastrados.",
-        "tags": ["Student"],
         "responses": {
           "200": {
             "description": "OK",
@@ -80,9 +78,7 @@
     },
     "/student/{id}": {
       "get": {
-        "sumary": "Encontrar aluno pelo id",
         "description": "Essa rota será responsável por encontrar um aluno específico pelo id.",
-        "tags": ["Student"],
         "parameters": [
           {
             "name": "id",
@@ -116,9 +112,7 @@
         }
       },
       "put": {
-        "sumary": "Alterar aluno pelo id",
         "description": "Essa rota será responsável por alterar os dados de um aluno específico pelo id.",
-        "tags": ["Student"],
         "parameters": [
           {
             "name": "id",
@@ -173,9 +167,7 @@
         }
       },
       "delete": {
-        "sumary": "Deletar aluno pelo id",
         "description": "Essa rota será responsável por apagar um aluno específico pelo id.",
-        "tags": ["Student"],
         "parameters": [
           {
             "name": "id",
@@ -215,13 +207,13 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "number"
+            "type": "integer"
           },
           "name": {
             "type": "string"
           },
           "age": {
-            "type": "number"
+            "type": "integer"
           },
           "firstSemesterScore": {
             "type": "number"
@@ -233,7 +225,7 @@
             "type": "string"
           },
           "roomNumber": {
-            "type": "number"
+            "type": "integer"
           }
         }
       }
