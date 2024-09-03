@@ -8,7 +8,6 @@ A School API oferece acesso a recursos para armazenar, recuperar, atualizar e ex
 - [Instalação](#instalação)
 - [Configuração](#configuração)
 - [Endpoints](#endpoints)
-- [Testes](#testes)
 - [Licença](#licença)
 
 ## Requisitos
@@ -114,10 +113,6 @@ Principais endpoints da API, com informações sobre seus métodos HTTP, descri�
 | /student     | POST   | Cria um novo aluno    | JSON       | POST /api/recurso      | Status 201 Created    |
 | /students:id | PUT    | Atualiza um aluno     | id         | PUT /students:id       | Status 200 OK         |
 | /students:id | DELETE | Exclui um aluno       | id         | DELETE /students:id    | Status 200 OK, [JSON] |
-
-## Testes
-
-Teste no Swagger: [Documentação Interativa no Swagger](https://school-api-rbyx.onrender.com/api-docs)
 
 ## Licença
 
